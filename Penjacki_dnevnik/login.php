@@ -51,9 +51,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <?php if ($msg): ?>
         <div class="form-success">
             <p><?php echo htmlspecialchars($msg); ?></p>
-            <p>
-                <a href="index.php?menu=20">Ulazak u administraciju</a>
-            </p>
+            <?php if (in_array($_SESSION["role"], ["administrator", "editor"], true)): ?>
+                <p><a href="index.php?menu=20">Ulazak u administraciju</a></p>
+            <?php else: ?>
+                <p><a href="index.php?menu=12">Idi na moj dnevnik</a></p>
+            <?php endif; ?>
         </div>
     <?php endif; ?>
 
