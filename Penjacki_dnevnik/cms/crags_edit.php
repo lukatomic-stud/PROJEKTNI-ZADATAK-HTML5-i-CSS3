@@ -87,21 +87,25 @@
     </div>
 
     <button class="btn" type="submit">Spremi</button>
-    <hr>
+  </form>
 
-    <h2>Brisanje</h2>
-    <form class="contact-form" method="post" action="index.php?menu=32&id=<?php echo $id; ?>">
+  <hr>
+
+  <h2>Brisanje</h2>
+
+  <form class="contact-form" method="post" action="index.php?menu=32&id=<?php echo $id; ?>">
     <input type="hidden" name="action" value="delete">
 
     <div class="form-row">
-        <label>
-        <input type="checkbox" name="force_delete" value="1">
+      <label class="checkbox-row">
         Obriši sve povezano (sektori, smjerovi i usponi) – OPREZ
-        </label>
+        <input type="checkbox" name="force_delete" value="1">
+      </label>
     </div>
 
-    <button class="btn" type="submit">Obriši penjalište</button>
-    </form>
-    <a class="btn" href="index.php?menu=30" style="margin-left:10px;">Natrag</a>
+    <div class="form-actions">
+      <button class="btn" type="submit">Obriši penjalište</button>
+      <a class="btn" href="index.php?menu=30">Natrag</a>
+    </div>
   </form>
 </section>
