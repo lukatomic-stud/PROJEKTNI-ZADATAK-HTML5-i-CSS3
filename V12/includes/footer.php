@@ -1,6 +1,6 @@
 <footer>
     <div class="footer-content">
-        <p>© 2026 Penjački dnevnik. Sva prava pridržana.</p>
+        <p>© 2026 Penjački dnevnik.</p>
 
         <div class="social-links">
             <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
