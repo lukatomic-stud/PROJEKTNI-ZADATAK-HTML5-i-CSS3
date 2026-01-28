@@ -15,5 +15,6 @@ function require_role(array $allowedRoles) {
     $role = $_SESSION["role"] ?? "user";
     if (!in_array($role, $allowedRoles, true)) {
         header("Location: index.php?menu=20");
+        exit;
     }
 }
